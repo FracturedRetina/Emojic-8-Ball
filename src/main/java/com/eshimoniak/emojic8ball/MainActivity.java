@@ -52,9 +52,6 @@ public class MainActivity extends ActionBarActivity {
 
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(question.getWindowToken(), 0);
-
-//        InputMethodManager keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-//        keyboard.showSoftInput(question, 0);
     }
 
     @Override

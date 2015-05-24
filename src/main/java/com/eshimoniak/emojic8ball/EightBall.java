@@ -1,5 +1,7 @@
 package com.eshimoniak.emojic8ball;
 
+import android.widget.Toast;
+
 import java.util.Random;
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -17,8 +19,10 @@ public class EightBall {
             text += (emojis[randomIndex]);
         }
 
-        if (text.length() == 3) {
-            text = text.substring(0, 1) + "\n" + text.substring(1);
+        if (randomStrLength == 3) {
+            text = text.substring(0, 1) + '\n' + text.substring(1);
+        } else {
+            text = '\n' + text;
         }
 
 

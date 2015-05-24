@@ -11,20 +11,24 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/title" />
+        android:src="@drawable/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/ball"
+        android:layout_toStartOf="@+id/ball" />
 
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:id="@+id/question_field"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
         android:text="How will I die?"
         android:textColor="#FF000000"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_toLeftOf="@+id/ball"
+        android:layout_toStartOf="@+id/ball" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -33,38 +37,38 @@
         android:src="@drawable/ask_button"
         android:background="#00ffffff"
         android:layout_below="@+id/question_field"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/ball"
+        android:layout_toStartOf="@+id/ball" />
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:id="@+id/ball"
         android:src="@drawable/ball"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="1dp"
-        android:layout_below="@+id/ask_button"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp" />
+        android:layout_alignTop="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
-        android:layout_width="130dp"
-        android:layout_height="263dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:id="@+id/triangle"
         android:src="@drawable/triangle"
-        android:layout_alignTop="@+id/ball"
-        android:layout_centerHorizontal="true"
         android:visibility="invisible"
-        android:layout_alignBottom="@+id/ball"
-        android:layout_marginTop="-37dp" />
+        android:layout_toEndOf="@+id/title"
+        android:layout_alignTop="@+id/ball"
+        android:layout_alignRight="@+id/ball"
+        android:layout_toRightOf="@+id/title"
+        android:layout_marginTop="60dp" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center"
         android:id="@+id/answer"
         android:textSize="32dp"
+        android:gravity="center"
         android:textIsSelectable="false"
         android:singleLine="false"
         android:textColor="#FF000000"
@@ -72,6 +76,5 @@
         android:layout_alignBottom="@+id/ball"
         android:layout_alignLeft="@+id/triangle"
         android:layout_alignRight="@+id/triangle"
-        android:layout_marginTop="-15dp"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginTop="-10dp" />
 </RelativeLayout>
