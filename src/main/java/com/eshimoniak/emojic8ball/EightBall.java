@@ -15,14 +15,13 @@ public class EightBall {
         int randomStrLength = (int) Math.floor(1.2 + gen.nextFloat() * (3.1 - 1.2));
 
         for (int i = 0; i < randomStrLength; i++) {
+            if (randomStrLength == 3 && i == 1) {
+                text += '\n';
+            } else if (randomStrLength != 3 && i == 0) {
+                text += '\n';
+            }
             int randomIndex = (int) Math.floor(gen.nextFloat() * emojis.length);
             text += (emojis[randomIndex]);
-        }
-
-        if (randomStrLength == 3) {
-            text = text.substring(0, 1) + '\n' + text.substring(1);
-        } else {
-            text = '\n' + text;
         }
 
 
